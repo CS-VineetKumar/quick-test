@@ -14,7 +14,7 @@ const JiraCard = ({ pluginConfig, getPluginConfig }: any) => {
 
   return (
     <>
-      <div className="col-span-1 flex flex-col bg-white rounded-lg shadow space-y-3 px-3 sm:px-6 py-5">
+      <div className="col-span-1 flex flex-col bg-white rounded-lg shadow space-y-3 px-3 sm:px-6 py-[30px]">
         <div className="w-36">
           {/* https://www.atlassian.com/company/news/press-kit */}
           <img
