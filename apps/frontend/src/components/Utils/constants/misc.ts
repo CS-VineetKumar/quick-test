@@ -22,6 +22,7 @@ export const enum ToastMessage {
   REMOVE_CARD_SUCCESS = "Card has been removed successfully",
   MEMBER_ADDED = "Member added successfully",
   MEMBER_DELETED = "Member deleted successfully",
+  TEST_CASE_TITLE_UNIQUE = "Test case title must be unique",
 }
 
 export const ValidatorMessage = {

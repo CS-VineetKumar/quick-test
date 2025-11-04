@@ -214,7 +214,13 @@ export default function TestCaseList({ projectName }: any) {
           setIsAddNewTestCaseModalVisible(false);
         }
       })
-      .catch((error) => showError(error.error))
+      .catch((error) => {
+        if (error.response.data.errCode === 409 && error.response.data.message === "This record already exists") {
+          showError(i18next.t(ToastMessage.TEST_CASE_TITLE_UNIQUE));
+        } else {
+          showError( error.message || i18next.t(ToastMessage.SOMETHING_WENT_WRONG));
+        }
+      })
       .finally(() => {
         refreshTestCasesData();
       });
